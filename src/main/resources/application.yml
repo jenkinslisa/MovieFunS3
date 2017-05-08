@@ -1,11 +1,17 @@
 spring:
-  mvc:
-    view:
-      prefix: /WEB-INF/
-      suffix: .jsp
   jpa:
     generate-ddl: true
     properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
   datasource:
     url: jdbc:mysql://localhost:3306/movies?useSSL=false
     username: root
+
+  mvc.view:
+    prefix: /WEB-INF/
+    suffix: .jsp
+
+s3:
+  endpointUrl: http://s3.amazonaws.com
+  accessKey: AKIAJ7PCLP4LBP3532JQ
+  secretKey: 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
+  bucketName: cf-22fd5962-1c0b-4f00-a22c-d86264f5496f
